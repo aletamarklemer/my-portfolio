@@ -1,0 +1,19 @@
+/* ============================================================
+   EDUCATION — JRMSU feature card + timeline rows + NC II
+   ============================================================ */
+.edu-list{display:flex;flex-direction:column;gap:1.2rem}
+
+/* feature card: university with seal */
+.edu{display:grid;grid-template-columns:auto 1fr;gap:2.4rem;align-items:center;padding:2.6rem}
+@media (max-width:720px){.edu{grid-template-columns:1fr;text-align:center;justify-items:center}}
+.edu img{width:110px;height:110px;border-radius:50%;border:1px solid var(--cyan-line);padding:6px;background:rgba(0,0,0,.4)}
+.edu h3{font-family:var(--serif);font-weight:500;font-size:1.5rem}
+.edu .deg{color:var(--cyan);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:.4rem 0 .6rem}
+.edu p{color:var(--text-dim);font-size:.92rem;max-width:40rem}
+
+/* compact rows: earlier schools + TESDA NC II */
+.edu-row{display:grid;grid-template-columns:150px 1fr;gap:2rem;align-items:baseline;padding:1.6rem 2.2rem}
+@media (max-width:720px){.edu-row{grid-template-columns:1fr;gap:.3rem}}
+.edu-row .yrs{font-family:var(--serif);font-style:italic;color:var(--cyan);font-size:1.05rem}
+.edu-row h4{font-family:var(--sans);font-weight:500;font-size:1.02rem;color:var(--text)}
+.edu-row p{color:var(--text-dim);font-size:.88rem;margin-top:.15rem}

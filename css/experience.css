@@ -1,0 +1,32 @@
+/* ============================================================
+   EXPERIENCE — current role feature card with duty pills
+   ============================================================ */
+.xp-card{padding:2.6rem;display:flex;flex-direction:column;gap:1.4rem}
+
+.xp-top{display:flex;justify-content:space-between;align-items:baseline;gap:1.5rem;flex-wrap:wrap}
+.xp-top h3{font-family:var(--serif);font-weight:500;font-size:1.6rem}
+.xp-top .xp-when{
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);
+  padding:.4rem .9rem;border:1px solid var(--cyan-line);border-radius:20px;white-space:nowrap;
+}
+.xp-role{color:var(--cyan);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin-top:-.9rem}
+.xp-card > p{color:var(--text-dim);font-size:.94rem;max-width:52rem}
+
+/* responsibilities as a two-column checklist */
+.xp-duties{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.65rem 2rem}
+@media (max-width:720px){.xp-duties{grid-template-columns:1fr}}
+.xp-duties li{
+  position:relative;padding-left:1.4rem;
+  color:var(--text-dim);font-size:.9rem;
+}
+.xp-duties li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:7px;height:7px;border:1px solid var(--cyan);transform:rotate(45deg);
+}
+
+/* tech stack pills */
+.xp-stack{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.2rem}
+.xp-stack li{
+  font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.35rem .8rem;border:1px solid var(--glass-line);border-radius:20px;color:var(--text-dim);
+}

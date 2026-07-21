@@ -1,0 +1,25 @@
+/* ============================================================
+   HEADER — fixed glass navigation bar
+   ============================================================ */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  background:rgba(16,20,21,.65);
+  border-bottom:1px solid var(--glass-line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+
+/* brand mark: MarkAleta. */
+.brand{font-family:var(--serif);font-size:1.3rem;font-weight:600;letter-spacing:.02em}
+.brand em{color:var(--cyan);font-style:normal}
+
+/* links with cyan underline sweep */
+.nav-links{display:flex;gap:2.2rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim)}
+.nav-links a{position:relative;padding:4px 0;transition:color .25s}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:1px;width:0;
+  background:var(--cyan);transition:width .3s ease;
+}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{width:100%}
+@media (max-width:720px){.nav-links{display:none}}
